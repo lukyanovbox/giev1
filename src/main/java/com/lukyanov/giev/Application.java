@@ -77,10 +77,10 @@ public class Application {
                }
                app.dataset.addSeries(series);
 
-               app.averageLabel.setText(String.valueOf(app.simpleGievGraphics.getAverageList().get(i)));
-               app.maxLabel.setText(String.valueOf(app.simpleGievGraphics.getMaxList().get(i)));
+               app.averageLabel.setText(String.format("%.2f", app.simpleGievGraphics.getAverageList().get(i)));
+               app.maxLabel.setText(String.format("%.2f", app.simpleGievGraphics.getMaxList().get(i)));
                i++;
-               Thread.sleep(1000);
+               Thread.sleep(100);
             }
             app.simpleGievGraphics.setState(false);
             app.simpleGievGraphics.setSeriesList(new ArrayList<>());

@@ -138,7 +138,7 @@ public class SimpleGiev1 {
             .min()
             .getAsDouble();
 
-      final Double correctCoeff = abs(minFValue);
+      final Double correctCoeff = abs(minFValue) + 1;
 
       final Double sumFcVal = population.stream()
             .mapToDouble(chr -> mathFunctionExecutor.applyAsDouble(chr.getX()) + correctCoeff)
